@@ -102,9 +102,9 @@ Research found was from www.w3schools.com. Specifically the HTML, JavaScript and
 
 ##### Burndown Chart
 
-![Example Burndown Chart](https://upload.wikimedia.org/wikipedia/commons/8/8e/SampleBurndownChart.svg)
+![](https://github.com/AoifeW123/Tracerball/blob/master/Burndown.jpg)
 
-Chart showing the completion of user stories over time
+This chart shows the what days were spent working. This is shown in the blue, the orange shows the days that were expsected.
 
 ##### User Stories Tracking Chart (Which Stories Have Been Completed)
 
