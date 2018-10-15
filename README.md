@@ -51,7 +51,7 @@ A button will be included to restart the game. This will be an event listener th
 
 ### III. Genre
 
-The genre of this project is that it is a casual game with aspects logic games. This is due to the user having to navigate the playable character from the NPC. This type of genre suits the games reqiurements as there isn't much depth in the game itself.
+The genre of this project is that it is a casual 2D reaction game. This is due to the user having to navigate the playable character from the NPC. This type of genre suits the games reqiurements as there isn't much depth in the game itself.
 
 ### IV. Technical Details
 
