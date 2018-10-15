@@ -6,7 +6,6 @@ The project is a game that is based on a non-playing character - NPC, targeting 
 
 ##### Epics
 
-Outlining the main fuctions of the game
 The main fucntion of the game will be the user input the mouse's cursor into the canvas area to start the game. Then have the game be triggered from this action. This trigger will start the startGame fucntion. This function will load the two rectangles that are under two different functions: "myGamePiece" and "myEnemyPiece". 
 
 "myGamePiece" will be the rectangle / square the user controls. This will be controlled by using cordinates in the code, as the cordinates will be set to where the cursor is on the screen. The corodinates set the basis for the rectange to be whereever the mouse is. 
@@ -15,12 +14,10 @@ The main fucntion of the game will be the user input the mouse's cursor into the
 
 
 ##### Non-Functional Requirements
-Asthetic or non essential requirements
 
 Within the game there are Asthetic and / or non essential requirements. These often include features of the objects that do matter but are not a whole fucntion on their own: heigh on objects, the width, the colour - defined often through the use of html colours black being #000000, the type of shape (round or Rectangular...), the border outline colour, the colour of the canvas, the padding... These are all Asthetic pieces that belong in a function, that will create the function. A button will be included to allow the player to restart the game and keep playing. Text will also be displayed to welcome theplayers to the game.
 
 ##### User Stories
-Written in the format: 
 
 As a player, I would like to be able to move the shape with the cursor and have the square where every the mouse is. The shape shouldn't be creating a drawing effect on the page or be just off with the cursor.
 
@@ -32,8 +29,6 @@ As a player, i would like to see some text welcoming me to the game.
 
 
 ##### How We Addressed The Requirements
-
-How will your planned product meet the user requirements
 
 The first step was to assess the brief requirements and break down what must be included. The brief states:
 
@@ -70,7 +65,6 @@ Javascript is used to help with the real time interactions that are going on in 
 Cascading Style Sheets (CSS) is a style sheet programming language that will describe the style of HTML webpage. It describes how the elements within need to be displayed. It is the presentation of a document in HTML. It allows the webpage to adjust to the devices in use; it adjusts to bigger and smaller screens.
 
 ##### Programming Challenges
-State the programing challenges you are trying to overcome
 
 The first issue I had was identfying specific issues. As I was in notepad, this didn't have a process that made debugging alot harder. To solve the issue i had to debug the programm in the webbrowser, this would only show syntax errors. Making it lack any IDE, whcih would have shown each section of the code.
 
@@ -86,14 +80,11 @@ Think of this as the method. How will you go about building your program?
 
 ##### Algorithms
 
-Explanation of the algorithms behind your program
-
 The main Algorthim that had to be used was when creating the Enemy object. This would be down to the enemy piece having to be able to chase the user's cursor cordinates. The algorthium is broken down into a procedure and will be broken down into each step. Each step will have a goal that if done correctly, will produce an outcome.
 
 When the user moves their piece the algorith is triggered. The algorithm should have the enemy square towards the user's piece. When the user move to the right of the canvas the enemy has to go to the right. (vice versa). This is creating the illusion that the emeny piece is chasing the user's piece. The algorthim also has to include speed. This as the enemy has to chase the user and not teleport to the user's cursor immediately.
  
 ##### Coding Standards 
-Standard for the code you will be writting 
 
 The standards of code that will be used need to be harmonised, consistent and in a coherent style. The coding standards that are fundental are the Good Basic Standards. These will be used to the best ability. The main focus are on:
 
@@ -104,6 +95,7 @@ The name of the functions and variables are strutured well
 Making sure that the code is readable and is understood.
 
 ### V. Research
+
 Research found was from www.w3schools.com. Specifically the HTML, JavaScript and CSS pages were used as a guidence.
 
 ### VI. Project Management
