@@ -1,22 +1,17 @@
 <!DOCTYPE html>
 <html>
 
-	<! This first tag is going to display a phrase, welcoming the player to the game.!>
+	//This first tag is going to display a phrase, welcoming the player to the game.
 
 	<h2>
-
   		<p style="color:#9933ff";>Welcome to </p>
-
 	</h2>
 
 	<h1>
-
   		<p style="color:#9933ff";>Can you Escape the Square?</p>
-
 	</h1>
 
 	<p>
-
 		<head>
 
 	<style>
@@ -31,25 +26,23 @@
 		
 		</head>
 	
+		<body onload="startGame()">
 
 
-<body onload="startGame()">
+	<script>
 
+	var myGamePiece;
 
-<script>
+	function startGame() {
+	    myGamePiece = new component(30, 30, "purple", 10, 120);
+	    myGameArea.start();
+	}
 
-var myGamePiece;
-
-function startGame() {
-    myGamePiece = new component(30, 30, "purple", 10, 120);
-    myGameArea.start();
-}
-
-var myGameArea = {
-    canvas : document.createElement("canvas"),
-    start : function() {
-        this.canvas.width = 500;
-        this.canvas.height = 350;
+	var myGameArea = {
+	    canvas : document.createElement("canvas"),
+	    start : function() {
+	    this.canvas.width = 500;
+            this.canvas.height = 350;
         //this.canvas.style.cursor = "none"; //hide the original cursor
         this.context = this.canvas.getContext("2d");
         //document.body.insertBefore(this.canvas, document.body.childNodes[0]);
