@@ -35,11 +35,43 @@ canvas
 <script>
 var myGamePiece;
 var enemyPiece;
-
 function startGame() {
-	myGamePiece = new component(30, 30, "purple", 10, 120);
+	myGamePiece = new component(30, 30, "purple", 30, 300);
 	enemyPiece = new component(30,30,"red",5,5);
 	myGameArea.start();
+	enemyPiece.updatePosition = function() {
+	var diffX = enemyPiece.x - myGamePiece.x;
+	var diffY = enemyPiece.y - myGamePiece.y;
+	enemySpeed = 3;
+	
+	var myScore;
+	var Lives = 3;
+	var LivesText;
+	var LifeLostText = "You've Lost"
+	myScore = function() {
+	
+	}
+	
+	if(diffX >0) 
+	{
+		enemyPiece.x -= enemySpeed;
+	}
+	else
+	{
+		enemyPiece.x += 3;
+	}
+	if(diffY >0)
+	{
+		enemyPiece.y -= 3;
+	}
+	else
+	{
+		enemyPiece.y += 3;
+	}
+	
+	
+}	
+
 }
 /*
 var Emeny;
@@ -95,6 +127,10 @@ function component(width, height, color, x, y) {
         ctx.fillRect(this.x, this.y, this.width, this.height);
     }
 }
+
+
+  
+
 function updateGameArea() {
     myGameArea.clear();
 	//add movement here
@@ -102,7 +138,7 @@ function updateGameArea() {
         myGamePiece.x = myGameArea.x;
         myGamePiece.y = myGameArea.y;    
 		} 
-	
+	enemyPiece.updatePosition();
 	 myGamePiece.update();
 	//without this the square doesnt display on the canvas
 	enemyPiece.update();
@@ -110,29 +146,9 @@ function updateGameArea() {
 	
 	//add movement here
 	//maybe if statements 
-myGamePiece.updatePosition = function() {
-	var diffX = enemyPiece.x - myGamePiece.x;
-	var diffY = enemyPiece.y - myGamePiece.y;
-
-	if(diffX >0)
-		myGamePiece.x += 3;
-		
-	else
-		myGamePiece.x -= 3;
-		
-	if(diffY >0)
-		myGamePiece.x += 3;
-		
-	else
-		myGamePiece.x -= 3;
-		
-		
-		
-}
 
 }
-	
-  
+
 /*			function myFunction(e) 
 {
 	var x = e.clientX;
