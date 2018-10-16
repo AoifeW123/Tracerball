@@ -35,20 +35,22 @@ canvas
 <script>
 var myGamePiece;
 var enemyPiece;
+var Crash;
+var LivesText;
+var LifeLostText;
+var myScore;
+var Lives = 3;
+
 function startGame() {
+	myGameArea.start();
+	
 	myGamePiece = new component(30, 30, "purple", 30, 300);
 	enemyPiece = new component(30,30,"red",5,5);
-	myGameArea.start();
 	enemyPiece.updatePosition = function() {
 	var diffX = enemyPiece.x - myGamePiece.x;
 	var diffY = enemyPiece.y - myGamePiece.y;
 	enemySpeed = 3;
-	
-	var myScore;
-	var Lives = 3;
-	
-
-	
+		
 	if(diffX >0) 
 	{
 		enemyPiece.x -= enemySpeed;
@@ -65,7 +67,6 @@ function startGame() {
 	{
 		enemyPiece.y += 3;
 	}
-	
 	
 }	
 
@@ -88,6 +89,8 @@ function Emeny (x,y,width,height,speed, ){
 	}
 }
 */
+
+
 draw = function() {
 	emeny.update();
 }
@@ -140,23 +143,29 @@ function updateGameArea() {
 	//without this the square doesnt display on the canvas
 	enemyPiece.update();
 	
+	if (myGameArea.x && myGameArea.y)
+	{
+	Crash.x = myGameArea.y;
+	Crash.x = myGameArea.x;
+	}
+	enemyPieceX = Crash.x
+	enemyPieceY = Crash.Y
+	Crash.update;
 	
-	//add movement here
-	//maybe if statements 
-
+	if (myGamePiece.x > enemyPiece.X)
+	
 }
 
 // add a score counter as a div
+	
+
 // crah with player
 // have it minus one each crash
 // if it goes lower than 0 dispaly tex saying you lose.
 // else life counter showing how many lives are left using "lives"
 // if nothing is touching it is a false.
-	var LivesText;
-	var LifeLostText = "You've Lost"
-	myScore = function(count) {
 	
-	}
+	
 
 /*			function myFunction(e) 
 {
