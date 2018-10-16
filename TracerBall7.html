@@ -44,13 +44,10 @@ function startGame() {
 	var diffY = enemyPiece.y - myGamePiece.y;
 	enemySpeed = 3;
 	
-	//var myScore;
-	//var Lives = 3;
-	//var LivesText;
-	//var LifeLostText = "You've Lost"
-	//myScore = function() {
+	var myScore;
+	var Lives = 3;
 	
-	//}
+
 	
 	if(diffX >0) 
 	{
@@ -148,6 +145,18 @@ function updateGameArea() {
 	//maybe if statements 
 
 }
+
+// add a score counter as a div
+// crah with player
+// have it minus one each crash
+// if it goes lower than 0 dispaly tex saying you lose.
+// else life counter showing how many lives are left using "lives"
+// if nothing is touching it is a false.
+	var LivesText;
+	var LifeLostText = "You've Lost"
+	myScore = function(count) {
+	
+	}
 
 /*			function myFunction(e) 
 {
