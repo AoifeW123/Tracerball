@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+
+<! This first tag is going to display a phrase, welcoming the player to the game.!>
+
+<h2>
+
+  <p style="color:#9933ff";>Welcome to </p>
+
+</h2>
+
+
+<h1>
+
+  <p style="color:#9933ff";>Can you Escape the Square?</p>
+
+</h1>
+
+
+<p>
+<head>
+
+<style>
+canvas
+{
+    
+    border: 1px solid black;
+}
+</style>
+</head>
+
+<body onload="startGame()">
+<div id="lifeCounter">Lives: </div>
+<script>
+// add more comments and tidy up the code
+var myGamePiece;
+var enemyPiece;
+var Crash;
+var globalTimer;
+var LivesText = document.getElementById("lifeCounter"); //Actual div for text display;
+var Lives = 3; //Keeps track of lives
+
+function startGame() {
+    myGameArea.start();
+    
+    myGamePiece = new component(30, 30, "purple", 30, 300);
+    enemyPiece = new component(30,30,"red",5,5);
+    enemyPiece.updatePosition = function() {
+    var diffX = enemyPiece.x - myGamePiece.x;
+    var diffY = enemyPiece.y - myGamePiece.y;
+    enemySpeed = 3;
+        
+    if(diffX >0){
+        enemyPiece.x -= enemySpeed;
+    } else {
+        enemyPiece.x += enemySpeed;
+    }
+    
+    if(diffY >0){
+        enemyPiece.y -= enemySpeed;
+    } else {
+        enemyPiece.y += enemySpeed;
+    }
+    } 
+    LivesText.innerHTML = " Lives: " + Lives;
+}   
+
+var myGameArea = {
+    canvas : document.createElement("canvas"),
+    start : function() {
+        this.canvas.width = 500;
+        this.canvas.height = 350;
+        this.id = "myCanvas";
+        //this.canvas.style.cursor = "none"; //hide the original cursor
+        this.context = this.canvas.getContext("2d");
+        var toChange = document.getElementById("myCanvas");
+        toChange.parentNode.replaceChild(this.canvas,toChange);
+        globalTimer = this.interval = setInterval(updateGameArea, 20); 
+        this.canvas.addEventListener('mousemove', function (e) {
+            myGameArea.x = e.offsetX;
+            myGameArea.y = e.offsetY;
+        })
+    }, 
+    clear : function(){
+        this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+    },
+    stop : function() {
+        clearInterval(globalTimer);
+    } 
+}
+function component(width, height, color, x, y) {
+    this.width = width;
+    this.height = height;
+    this.speedX = 0;
+    this.speedY = 0;    
+    this.x = this.firstX = x;
+    this.y = this.firstY = y;  
+    this.update = function() {
+        ctx = myGameArea.context;
+        ctx.fillStyle = color;
+        ctx.fillRect(this.x, this.y, this.width, this.height);
+    }
+	
+	// Sort code out to standards add capitals for vars
+    this.crashWith = function(otherobj) {
+        var playerleft = this.x;
+        var playerright = this.x + (this.width);
+        var playertop = this.y;
+        var playerbottom = this.y + (this.height);
+        var otherleft = otherobj.x;
+        var otherright = otherobj.x + (otherobj.width);
+        var othertop = otherobj.y;
+        var otherbottom = otherobj.y + (otherobj.height);
+        var crash = true;
+        if ((playerbottom < othertop) ||
+               (playertop > otherbottom) ||
+               (playerright < otherleft) ||
+               (playerleft > otherright)) {
+           crash = false;
+        }
+        return crash;
+        
+    }
+    this.resetPiece = function() {
+        this.x = this.firstX;
+        this.y = this.firstY;
+    }
+}
+  
+function updateGameArea() {
+
+    if (myGamePiece.crashWith(enemyPiece)) {
+        Lives -= 1;
+        if (Lives <= 0) {
+            myGameArea.stop();
+            LivesText.innerHTML = "YOU HAVE NO LIVES LEFT HAHAHA";
+        } else {
+            LivesText.innerHTML = "Lives Left: " + Lives;
+            myGameArea.stop();
+            restartTheGameArea();
+        } 
+
+        
+        
+    } else {
+        myGameArea.clear();
+        //add movement here
+        if (myGameArea.x && myGameArea.y) {
+            myGamePiece.x = myGameArea.x;
+            myGamePiece.y = myGameArea.y;    
+        } 
+        enemyPiece.updatePosition();
+        myGamePiece.update();
+        enemyPiece.update();
+    
+    }
+    
+    
+}
+
+function restartTheGameArea() {
+    myGameArea.clear();
+    myGamePiece.resetPiece();
+    enemyPiece.resetPiece();
+    myGamePiece.update();
+    enemyPiece.update();
+    globalTimer = setInterval(updateGameArea, 20);
+    setTimeout(updateGameArea,3000);
+}
+    
+// add a score counter as a div
+    
+// crash with player
+// have it minus one each crash
+// if it goes lower than 0 dispaly text saying you lose.
+// else life counter showing how many lives are left using "lives"
+// if nothing is touching it is a false.
+	
+
+/*
+var Emeny;
+function Emeny (x,y,width,height,speed, ){
+	this.x = x - 10;
+	this.y = y - 10;
+	this.width = width;
+  	this.height = height;
+	this.speedX = 0 ;
+   	this.speedY = 0 ; 
+	this.update = function() {
+        ctx = myGameArea.context;
+        ctx.fillStyle = color;
+        ctx.fillRect(this.x, this.y, this.width, this.height);
+		//creating some actions
+		ellipse(this.x,this.y,this.size);
+	}
+}
+*/
+
+
+/*			function myFunction(e) 
+{
+	var x = e.clientX;
+	var y = e.clientY;
+	var coor = "Coordinates: (" + x + "," + y + ")";
+	document.getElementById("demo").innerHTML = coor;
+	var c = document.getElementById("myCanvas");
+	var ctx = c.getContext("2d");
+	ctx.lineWidth="6";
+	ctx.strokeStyle="#F00";
+	ctx.strokeRect(20,20,20,20);
+	ctx.fillRect(20,20,20,20);
+}
+*/
+    
+
+</script>
+
+<canvas id="myCanvas">
+</canvas>
+
+
+    
+</body>
+</html>
