@@ -110,10 +110,10 @@ This chart shows the what days were spent working. This is shown in the blue, th
 
 Table showing user stories with weighting, due date and completion state
 
-![](https://github.com/AoifeW123/Unit-1-Programming/blob/master/Implimented.jpg)
+![](https://github.com/AoifeW123/Tracerball/blob/master/Implimented%202.jpg)
 
-the one should represent a no not yes
-
+Unfortunatly i wasnt able to impliment a player score that showed the player how well they were doing 
+ // add more onto this.
 
 ##### Flowchart
 
