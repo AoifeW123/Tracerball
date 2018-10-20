@@ -44,6 +44,7 @@ If the NPC touches the playable character then the game will start again until t
 
 A button will be included to restart the game. This will be an event listener that once clicked on will restart the game. This will use the function startGame.
 
+// talk about removing button, scrapping the score and adding other object movements and global timer from research
 ### III. Genre
 
 The genre of this project is that it is a casual 2D reaction game. This is due to the user having to navigate the playable character from the NPC. This type of genre suits the games reqiurements as there isn't much depth in the game itself.
@@ -97,6 +98,8 @@ Making sure that the code is readable and is understood.
 ### V. Research
 
 Research found was from www.w3schools.com. Specifically the HTML, JavaScript and CSS pages were used as a guidence.
+
+// talk about removing button, scrapping the score and adding other object movements and global timer from research
 
 ### VI. Project Management
 
