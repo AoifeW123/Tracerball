@@ -113,7 +113,6 @@ This chart shows the what days were spent working. This is shown in the blue, th
 
 ##### User Stories Tracking Chart (Which Stories Have Been Completed)
 
-Table showing user stories with weighting, due date and completion state
 
 ![](https://github.com/AoifeW123/Tracerball/blob/master/Implimented%202.jpg)
 
@@ -127,4 +126,4 @@ Flowchart showing how the program will work:
 
 ##### Functions
 
-Descriptions of functions given on flowchart
+
