@@ -44,7 +44,7 @@ If the NPC touches the playable character then the game will start again until t
 
 A button will be included to restart the game. This will be an event listener that once clicked on will restart the game. This will use the function startGame.
 
-// talk about removing button, scrapping the score and adding other object movements and global timer from research
+
 ### III. Genre
 
 The genre of this project is that it is a casual 2D reaction game. This is due to the user having to navigate the playable character from the NPC. This type of genre suits the games reqiurements as there isn't much depth in the game itself.
@@ -67,9 +67,9 @@ Cascading Style Sheets (CSS) is a style sheet programming language that will des
 
 ##### Programming Challenges
 
-The first issue I had was identfying specific issues. As I was in notepad, this didn't have a process that made debugging alot harder. To solve the issue i had to debug the programm in the webbrowser, this would only show syntax errors. Making it lack any IDE, whcih would have shown each section of the code.
+The first issue was identfying specific issues. The project was in notepad making debugging alot harder. To solve the issue, debugging had to be done through the console on the webbrowser. It would only show syntax errors; making it lack any IDE. Having an IDE would have shown each section of the code. By only showing the syntax errors, each line had to be assessed for simple mistakes that were made: missing simple commas or semi colons.
 
-The second issue I had was making the enemy appear in the canvas and making it actually appear as if it was chasing the cursor. IT would either not appear in the canvas area, chase the cursor or it would load on top of the playable character.
+The second issue was making the enemy appear in the canvas and making it actually appear as if it was chasing the cursor. IT would either not appear in the canvas area, chase the cursor or it would load on top of the playable character. The first step was to create another variable that used the same function as the user's piece. This was named enemyPiece. Then an if function was used to create the appearence of the Piece moving. THis was done by creating another variable that measured the difference between both the Y and X axis. Then if the Y / X axis was either grather of less than 0 the enemy piece will move to the same coordinates but with a delayed speed.
 
 Figuring out how to track the amount of lives the user has and the score the user has.
 
