@@ -121,7 +121,9 @@ Unfortunatly I wasn't able to impliment a player score that showed the player ho
 
 ##### Flowchart
 
-Flowchart showing how the program will work
+Flowchart showing how the program will work:
+
+![](https://github.com/AoifeW123/Tracerball/blob/master/TracerBallFLowChart.jpg)
 
 ##### Functions
 
