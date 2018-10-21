@@ -69,14 +69,18 @@ Cascading Style Sheets (CSS) is a style sheet programming language that will des
 
 The first issue was identfying specific issues. The project was in notepad making debugging alot harder. To solve the issue, debugging had to be done through the console on the webbrowser. It would only show syntax errors; making it lack any IDE. Having an IDE would have shown each section of the code. By only showing the syntax errors, each line had to be assessed for simple mistakes that were made: missing simple commas or semi colons.
 
-The second issue was making the enemy appear in the canvas and making it actually appear as if it was chasing the cursor. IT would either not appear in the canvas area, chase the cursor or it would load on top of the playable character. The first step was to create another variable that used the same function as the user's piece. This was named enemyPiece. Then an if function was used to create the appearence of the Piece moving. THis was done by creating another variable that measured the difference between both the Y and X axis. Then if the Y / X axis was either grather of less than 0 the enemy piece will move to the same coordinates but with a delayed speed.
+The second issue was making the enemy appear in the canvas and making it actually appear as if it was chasing the cursor. IT would either not appear in the canvas area, chase the cursor or it would load on top of the playable character. The first step was to create another variable that used the same function as the user's piece. This was named enemyPiece. Then an if function was used to create the appearence of the Piece moving. This was done by creating another variable that measured the difference between both the Y and X axis. Then if the Y / X axis was either grather of less than 0 the enemy piece will move to the same coordinates but with a delayed speed.
 
-Figuring out how to track the amount of lives the user has and the score the user has.
+The next step was to create a crash function that made it if any part of the enemy's square touched the player's square then the game will either stop or take a life away. This was done by creating a bunch of variables that stored the width / height along with the X / Y axis. For example, the player's Right side is stored in the variable as " var playerRight = this.x + (this.width); ". If this is true the crash will happen. IF not then the enemy sqaure will still chase the user's
 
+Figuring out how to track the amount of lives the user has and the score the user has was the Final challenge. This had to use use an if function to takaway one from the total of lives (3) each time a crach occured. The lives couldn't go below the value of 0 and if that was met then text would be dispalyed.
+
+Unfortunately there was no score added as there wasn't a successful implimentation from the research that was conducted. Orginally the user's score was going to be tracked and be added. When the game was over it would've added the score and presented it to the user. This didn't succeed.
  
 ##### Constructing And Implementing My Code
 
 Think of this as the method. How will you go about building your program?
+When creating the program research will be done and samples maybe used for refencing / guiding the project. This would be used for the more differcult tasks, such as creating the algorithm that follows the cursor and the two pieces to collide then stop. If needed guidence will be taken from others; this includes furhter research from other useful websites.
 
 
 ##### Algorithms
@@ -97,9 +101,7 @@ Making sure that the code is readable and is understood.
 
 ### V. Research
 
-Research found was from www.w3schools.com. Specifically the HTML, JavaScript and CSS pages were used as a guidence.
-
-// talk about removing button, scrapping the score and adding other object movements and global timer from research
+Research found was from www.w3schools.com. Specifically the HTML, JavaScript and CSS pages were used as a guidence. Asked for guidence from my peers
 
 ### VI. Project Management
 
@@ -115,8 +117,7 @@ Table showing user stories with weighting, due date and completion state
 
 ![](https://github.com/AoifeW123/Tracerball/blob/master/Implimented%202.jpg)
 
-Unfortunatly i wasnt able to impliment a player score that showed the player how well they were doing 
- // add more onto this.
+Unfortunatly I wasn't able to impliment a player score that showed the player how well they were doing; as mentioned above.
 
 ##### Flowchart
 
